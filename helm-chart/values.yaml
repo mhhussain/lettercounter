@@ -6,20 +6,20 @@ replicaCount: 0
 
 app:
   buckets:
-    url: ""
+    url: "http://dev-cdi.xby2-rnd.com/eks/cdi/svc/buckets"
   workflow:
-    url: ""
+    url: "http://dev-cdi.xby2-rnd.com/eks/cdi/svc/workflow"
     id: 2
   ticker:
     outer: 3000
     inner: 1000
 
 db:
-  host: ""
+  host: "clinical-integrator.c0r3mfqlrqup.us-east-2.rds.amazonaws.com"
   port: 5432
-  user: ""
-  password: ""
-  dbname: 
+  user: "postgres"
+  password: "Xby235055w12milerd."
+  dbname: cdidev
 
 image:
   repository: moohh/lettercounter

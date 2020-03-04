@@ -5,17 +5,17 @@ let moment = require('moment');
 let uuid = require('uuid/v4');
 let { Pool } = require('pg');
 
-let bucketsURL = _.defaultTo(process.env.BUCKETS_URL, '');
-let workflowURL = _.defaultTo(process.env.WORKFLOW_URL, '');
+let bucketsURL = _.defaultTo(process.env.BUCKETS_URL, 'http://dev-cdi.xby2-rnd.com/eks/cdi/svc/buckets');
+let workflowURL = _.defaultTo(process.env.WORKFLOW_URL, 'http://dev-cdi.xby2-rnd.com/eks/cdi/svc/workflow');
 
 let hostname = process.env.HOSTNAME;
 
 let pool = new Pool({
-    host: _.defaultTo(process.env.DB_HOST ,''),
+    host: _.defaultTo(process.env.DB_HOST ,'clinical-integrator.c0r3mfqlrqup.us-east-2.rds.amazonaws.com'),
     port: _.defaultTo(process.env.DB_PORT ,5432),
-    user: _.defaultTo(process.env.DB_USER ,''),
-    password: _.defaultTo(process.env.DB_PASSWORD ,''),
-    database: _.defaultTo(process.env.DB_NAME ,'')
+    user: _.defaultTo(process.env.DB_USER ,'postgres'),
+    password: _.defaultTo(process.env.DB_PASSWORD ,'Xby235055w12milerd.'),
+    database: _.defaultTo(process.env.DB_NAME ,'cdidev')
 });
 
 let outerTicker = _.defaultTo(process.env.OUTER_TICKER, 3000);

@@ -38,6 +38,9 @@ Common labels
 app.kubernetes.io/name: {{ include "lettercounter.name" . }}
 helm.sh/chart: {{ include "lettercounter.chart" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+app: {{ include "lettercounter.name" . }}
+version: {{ .Release.Name }}
+chart: {{ include "lettercounter.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
