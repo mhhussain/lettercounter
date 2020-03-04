@@ -1,0 +1,7 @@
+.git
+node_modules
+bitbucket-pipelines.yml
+helm-chart
+Dockerfile
+package-lock.json
+log
